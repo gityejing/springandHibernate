@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  * @update [修改人] [修改时间] [变更描述]
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:applicationContext.xml","classpath:applicationContext-mvc.xml"})
+@ContextConfiguration({"applicationContext.xml","classpath:applicationContext-mvc.xml"})
 public class MenuTest extends AbstractJUnit4SpringContextTests {
     @Resource(name = "menuService")
     private MenuService menuService;
