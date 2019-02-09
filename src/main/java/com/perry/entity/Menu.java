@@ -14,7 +14,7 @@ public class Menu {
     private Integer menuDesc;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "menu_id", nullable = false)
     public Integer getMenuId() {
         return menuId;
@@ -89,4 +89,12 @@ public class Menu {
         result = 31 * result + (menuDesc != null ? menuDesc.hashCode() : 0);
         return result;
     }
+
+	@Override
+	public String toString() {
+		return "Menu [menuId=" + menuId + ", menuName=" + menuName + ", menuUrl=" + menuUrl + ", parentId=" + parentId
+				+ ", menuDesc=" + menuDesc + "]";
+	}
+    
+    
 }
